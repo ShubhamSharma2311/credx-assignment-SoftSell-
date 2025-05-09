@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
@@ -6,20 +8,18 @@ import Testimonials from './components/testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
-
 export default function Home() {
   return (
     <div className="min-h-screen">
-    <Navbar />
-    <main>
-    <Hero />
+      <Navbar />
+      <main>
+        <Hero />
         <HowItWorks />
         <WhyChooseUs />
         <Testimonials />
         <ContactForm />
-    </main>
-    <Footer />
-  </div>
-    
+      </main>
+      <Footer />
+    </div>
   );
 }
