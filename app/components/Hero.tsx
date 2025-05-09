@@ -3,7 +3,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Player component with ssr: false
+const LottiePlayer = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then(mod => mod.Player),
+  { ssr: false }
+);
 
 const Hero: React.FC = () => {
   return (
@@ -63,10 +69,9 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="glass rounded-2xl p-4 md:p-6 shadow-glass">
-              <Player
+              <LottiePlayer
                 autoplay
                 loop
-                // since the file lives in public/, this will fetch /animation.json
                 src="/licence.json"
                 style={{ width: "100%", height: "100%", minHeight: "250px" }}
               />
