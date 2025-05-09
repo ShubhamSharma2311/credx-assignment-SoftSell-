@@ -118,7 +118,7 @@ const ContactForm = () => {
                   <FiSend className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-                <p className="text-lg opacity-80 mb-6">Your message has been sent successfully. We'll be in touch soon!</p>
+                <p className="text-lg opacity-80 mb-6">Your message has been sent successfully. We&apos;ll be in touch soon!</p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -63,9 +64,11 @@ const Testimonials = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="shrink-0">
                   <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden glass p-1">
-                    <img 
+                    <Image 
                       src={testimonials[currentIndex].avatar} 
                       alt={testimonials[currentIndex].name}
+                      width={96}
+                      height={96}
                       className="w-full h-full object-cover rounded-full"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
@@ -75,7 +78,7 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <div>
-                  <blockquote className="text-lg italic mb-4">"{testimonials[currentIndex].quote}"</blockquote>
+                  <blockquote className="text-lg italic mb-4">&quot;{testimonials[currentIndex].quote}&quot;</blockquote>
                   <div>
                     <p className="font-semibold">{testimonials[currentIndex].name}</p>
                     <p className="text-sm opacity-70">{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</p>
