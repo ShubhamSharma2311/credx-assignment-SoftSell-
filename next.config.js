@@ -5,6 +5,11 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  // Add these settings to handle server rendering issues
+  output: 'export',  // Use static export instead of SSR
+  images: {
+    unoptimized: true, // Required for static export
+  },
 }
 
 module.exports = nextConfig 
