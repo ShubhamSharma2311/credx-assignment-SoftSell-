@@ -32,8 +32,9 @@ const Navbar = () => {
           className="flex items-center"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">
-            SoftSell
+          <span className="text-2xl font-bold">
+            <span className="text-indigo-600">Soft</span>
+            <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Sell</span>
           </span>
         </motion.div>
 

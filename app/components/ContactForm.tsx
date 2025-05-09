@@ -122,7 +122,7 @@ const ContactForm = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 bg-primary-600 text-white rounded-full shadow-lg"
+                  className="!bg-indigo-600 !text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:!bg-indigo-700 transition duration-300 shadow-lg"
                   onClick={() => setIsSubmitted(false)}
                 >
                   Send Another Message
@@ -237,11 +237,9 @@ const ContactForm = () => {
                   type="submit"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`px-8 py-4 w-full rounded-full text-white font-medium ${
-                    isSubmitting 
-                      ? 'bg-primary-400 cursor-not-allowed' 
-                      : 'bg-primary-600 hover:bg-primary-700'
-                  } transition duration-300 shadow-lg flex items-center justify-center`}
+                  className={`!bg-indigo-600 !text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:!bg-indigo-700 transition duration-300 shadow-lg w-full flex items-center justify-center ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
